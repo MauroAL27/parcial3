@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>create-person</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="createPersonForm" (submit)="createPerson()">
+    <ion-item>
+      <ion-label stacked> Nombre </ion-label>
+      <ion-input
+        formControlName="personName"
+        type="text"
+        placeholder="Nombre asistente"
+      >
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked> Apellido asistente </ion-label>
+      <ion-input
+        formControlName="personLastname"
+        type="text"
+        placeholder="Apellido assitente "
+      >
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked> Email</ion-label>
+      <ion-input formControlName="personEmail" type="text" placeholder="Email">
+      </ion-input>
+    </ion-item>
+    <ion-button expand="block" type="submit">Agregar persona </ion-button>
+  </form>
+</ion-content>

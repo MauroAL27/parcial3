@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>person-list</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card
+    *ngFor="let person of personList "
+    routerLink="/detail/{{person.id}}"
+  >
+    <ion-card-header> {{person.personName}} </ion-card-header>
+    <ion-card-content>
+      Nombre del artista: {{person.personLastName}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>
